@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const ObjectId = mongoose.Schema.Types.ObjectId
 const signupSchema = new mongoose.Schema({
    firstName: {
       type: String,
@@ -16,14 +17,15 @@ const signupSchema = new mongoose.Schema({
       type: Number,
       required: true,
    },
-   mobile:{
-      type : String,
-      required : true,
-   },
-   password:{
-     type : String ,
-     required : true
-   }
+   adminId: {
+      type: ObjectId,
+      ref: "adminname",
+      required: true
+  },
+  isDeleted :{
+     type : Boolean,
+     default : false
+  }
 
 }, { timestamps: true });
 

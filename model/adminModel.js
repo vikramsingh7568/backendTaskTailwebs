@@ -8,6 +8,10 @@ const logInSchema = new mongoose.Schema({
        type : String,
        required : true
    },
+   email:{
+      type : String ,
+      required : true
+    },
    password:{
      type : String ,
      required : true
@@ -15,4 +19,4 @@ const logInSchema = new mongoose.Schema({
 
 }, { timestamps: true });
 
-module.exports = mongoose.model('logInstudent', logInSchema)
+module.exports = mongoose.model('adminname', logInSchema)
