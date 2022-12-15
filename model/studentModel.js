@@ -9,6 +9,10 @@ const signupSchema = new mongoose.Schema({
       type: String,
       required: true
    },
+   studentId :{
+     type : String,
+     required : true
+   },
    subject: {
       type: String,
       required: true

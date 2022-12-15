@@ -16,6 +16,8 @@ router.post("/logInAdmin",adminController.logInAdmin)
 // create users 
 router.post("/studentRegister",auth.authentication,auth.Authorisation ,studentController.studentRegister)
 router.get("/filterStudent",auth.authentication,auth.Authorisation ,studentController.filterStudent)
+router.get("/getAllStudent",auth.authentication,auth.Authorisation ,studentController.getAllStudent)
+router.post("/editStudent",auth.authentication,auth.Authorisation ,studentController.editStudent)
 router.delete("/deleteStudent",auth.authentication,auth.Authorisation ,studentController.deleteStudent)
 
 
